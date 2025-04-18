@@ -13,6 +13,8 @@ def check_username(username):
         code = response_data.get("code")
         if code == 0:
             print(Fore.GREEN + f"VALID: {username}" + Style.RESET_ALL)
+            with open("valid.txt", "a") as valid_file:
+                valid_file.write(username + "\n")
         elif code == 1:
             print(Fore.LIGHTBLACK_EX + f"TAKEN: {username}" + Style.RESET_ALL)
         elif code == 2:
