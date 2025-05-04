@@ -4,6 +4,17 @@ from colorama import Fore, Style, init
 
 init()
 
+banner = r"""
+  ______   ____  ____  _____  _____  ____  _____   ______  _____  _________  ________ 
+.' ____ \ |_   ||   _||_   _||_   _||_   \|_   _|.' ___  ||_   _||  _   _  ||_   __  |
+| (___ \_|  | |__| |    | |    | |    |   \ | | / .'   \_|  | |  |_/ | | \_|  | |_ \_|
+ _.____`.   |  __  |    | '    ' |    | |\ \| | | |   ____  | |      | |      |  _| _ 
+| \____) | _| |  | |_    \ \__/ /    _| |_\   |_\ `.___]  |_| |_    _| |_    _| |__/ |
+ \______.'|____||____|    `.__.'    |_____|\____|`._____.'|_____|  |_____|  |________|
+ 
+ Made by clemouche :)
+"""
+
 def check_username(username):
     url = f"https://auth.roblox.com/v1/usernames/validate?Username={username}&Birthday=2000-01-01"
     try:
@@ -26,6 +37,9 @@ def check_username(username):
         print(Fore.YELLOW + f"glitch {username}: {e}" + Style.RESET_ALL)
 
 def main():
+    print(Fore.CYAN + banner + Style.RESET_ALL)
+    input("Press Enter to continue...")
+
     with open("usernames.txt", "r") as file:
         usernames = file.read().splitlines()
 
