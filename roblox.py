@@ -26,9 +26,6 @@ def check_username(username):
         print(Fore.YELLOW + f"glitch {username}: {e}" + Style.RESET_ALL)
 
 def main():
-    print(Fore.CYAN + banner + Style.RESET_ALL)
-    input("Press Enter to continue...")
-
     with open("usernames.txt", "r") as file:
         usernames = file.read().splitlines()
 
