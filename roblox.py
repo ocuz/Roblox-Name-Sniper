@@ -31,7 +31,7 @@ def main():
 
     for username in usernames:
         check_username(username)
-        time.sleep(0.05)
+        time.sleep(0)
 
 if __name__ == "__main__":
     main()
